@@ -4,6 +4,10 @@
 sudo apt update
 sudo apt install -y net-tools
 
+# Установка пароля для пользователя root
+echo "Установка пароля для пользователя root..."
+sudo passwd root
+
 # Получение текущего IP-адреса интерфейса enp0s8
 INTERFACE="enp0s8"
 CURRENT_IP=$(ip -f inet addr show $INTERFACE | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
